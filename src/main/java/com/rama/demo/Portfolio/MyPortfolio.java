@@ -28,7 +28,7 @@ public class MyPortfolio {
     public String Skills(){
         return """
                 <h1>Skills</h1>
-                <p>I have cloud and security skills</p>
+                <p>Iam pro efficient in</p>
                 <ul>
                     <li>Data science<li>
                     <li>Machine learning</li>
@@ -40,10 +40,21 @@ public class MyPortfolio {
                 </ul>""";
     }
     @GetMapping("/education")
-    void Education(){
+    public String Education(){
+        return """
+            
+            <h1>Education</h1>
+            <p>Iam Studying Btech in cse in 4th year</p>
+            """;
+
+
     }
     @GetMapping("/projects")
-    void Project(){
+    public String Projects(){
+        return"""
+                <h1>Projects</h1>
+                
+                
 
     }
 }
