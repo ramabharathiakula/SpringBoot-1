@@ -53,7 +53,8 @@ public class MyPortfolio {
     public String Projects(){
         return"""
                 <h1>Projects</h1>
-                
+                <p>Real-Time Water Supply Tracker is a smart water distribution monitoring system developed using C++, Data Structures & Algorithms, HTML, CSS, and JavaScript. It models the water supply network as a graph and uses BFS, DFS, and Dijkstra's Algorithm to determine efficient water distribution routes. The application provides real-time visualization of pipelines, tanks, and supply status through an interactive web interface. It helps optimize water distribution, reduce delays, and improve resource management in urban water supply networks.</p>
+                """;
                 
 
     }
