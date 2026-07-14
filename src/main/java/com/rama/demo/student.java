@@ -1,12 +1,15 @@
 package com.rama.demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class student {
     private String name;
     private int age;
-    public Student(){
+    public student(){
 
     }
-    public Student(int age,String name){
+    public student(int age,String name){
         this.age=age;
         this.name=name;
     }
