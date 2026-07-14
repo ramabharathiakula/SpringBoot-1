@@ -33,6 +33,8 @@ public class MyPortfolio {
                     <li>Data science<li>
                     <li>Machine learning</li>
                     <li>Software testing</li>
+                    <li>Data Structures And Algorithms</li>
+                    <li>cpp</li>
                    
                 
                 </ul>""";
