@@ -4,6 +4,7 @@ import com.rama.demo.StudentServer.Entity.Student;
 import com.rama.demo.StudentServer.Repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 
 @Service
 public class StudentService {
@@ -29,7 +30,11 @@ public class StudentService {
 
 
     }
+
     public Student getStudentById(int id){
+        return studentRepository.findById(id).orElse(null);
+    }
+    public Student updateStudent(int id){
         return studentRepository.findById(id).orElse(null);
     }
 
