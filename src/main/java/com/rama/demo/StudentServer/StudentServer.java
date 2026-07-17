@@ -2,20 +2,21 @@ package com.rama.demo.StudentServer;
 
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class StudentServer {
     //1. store the student
-    @PostMapping("/create")
-    public String storeStudent(){
-        return """
-                id: 1
-                name: Rama
-                Department: CSE
-                age: 20
-                """;
-    }
+//    @PostMapping("/create")
+//    public String storeStudent(@RequestBody Student student){
+//        int id=student.getId();
+//        String name =student.getName();
+//        int age=student.getAge();
+//        String department =student.getDepartment();
+//
+//        return "id:"+id+",name:"+name+",department:"+department+",age:"+age;
+//    }
 
     //2.Read the student with id
 
