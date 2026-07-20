@@ -2,6 +2,8 @@ package com.rama.demo.StudentServer.Controller;
 
 
 
+import com.rama.demo.DTO.CreateStudentRequestDTO;
+import com.rama.demo.DTO.CreateStudentResponseDTO;
 import com.rama.demo.StudentServer.Entity.Student;
 import com.rama.demo.StudentServer.Service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,21 +20,13 @@ public class StudentController {
         this.studentService =studentService;
     }
     @PostMapping("/create")
-    public ResponseEntity<Student> storeStudent(@RequestBody Student student){
-//        int id=student.getId();
-//        String name=student.getName();
-//        int age=student.getAge();
-//        String department=student.getDepartment();
-//        return "id : "+id+", name : "+name+", age : "+age+", department : "+department;
-          Student result=studentService.studentValidate(student);
-
-//          if(result==null){
-//              return ResponseEntity.status(400).body(result);
-//          }
-          return ResponseEntity.status(201).body(student);
+    public ResponseEntity<?> storeStudent(@RequestBody CreateStudentRequestDTO createStudentRequestDTO){
+            CreateStudentResponseDTO result = studentService.studentValidate(createStudentRequestDTO);
+            return ResponseEntity.ok(result);
+        }
 
 
-    }
+
     @GetMapping("/get/{id}")
     public ResponseEntity<?> getStudentById(@PathVariable int id){
         Student student =studentService.getStudentById(id);

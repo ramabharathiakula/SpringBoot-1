@@ -1,7 +1,12 @@
 package com.rama.demo.StudentServer.Entity;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
+
+import java.time.LocalDateTime;
 
 @Entity
 public class Student {
@@ -11,7 +16,11 @@ public class Student {
     int age;
     String department;
 
-
+    @CreationTimestamp
+    @Column(updatable = false)
+    private LocalDateTime createdAt;
+    @UpdateTimestamp
+    private LocalDateTime updatedAt;
 
     public int getId() {
         return id;
