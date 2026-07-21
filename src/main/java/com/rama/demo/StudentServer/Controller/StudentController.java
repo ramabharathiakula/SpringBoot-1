@@ -28,9 +28,14 @@ public class StudentController {
 
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<?> getStudentById(@PathVariable int id){
-        Student student =studentService.getStudentById(id);
-        return ResponseEntity.status(200).body(student);
+//    public ResponseEntity<?> getStudentById(@PathVariable int id){
+//        Student student =studentService.getStudentById(id);
+//        return ResponseEntity.status(200).body(student);
+//    }
+    public ResponseEntity<?> getStudentById(@PathVariable int id) throws Exception {
+        Student student=studentService.getStudentById(id);
+//        return ResponseEntity.status(200).body(student);
+         return ResponseEntity.ok(student);
     }
     @PutMapping("/update/{id}")
     public ResponseEntity<?> updateStudent(@PathVariable int id, @RequestBody Student student) {

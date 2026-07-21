@@ -8,6 +8,7 @@ import com.rama.demo.DTO.CreateStudentRequestDTO;
 import com.rama.demo.DTO.CreateStudentResponseDTO;
 
 import java.time.LocalDateTime;
+import java.util.Optional;
 
 @Service
 public class StudentService {
@@ -38,10 +39,12 @@ public class StudentService {
         return mapToResponseDTO(student);
     }
 
+//
+public Student getStudentById(int id) throws Exception{
+    Optional<Student> student=studentRepository.findById(id);
+    return student.get();
 
-    public Student getStudentById(int id) {
-        return studentRepository.findById(id).orElse(null);
-    }
+}
 
     public Student updateStudent(int id) {
         return studentRepository.findById(id).orElse(null);
@@ -70,4 +73,6 @@ public class StudentService {
 
         return createStudentResponseDTO;
     }
+
+
 }
