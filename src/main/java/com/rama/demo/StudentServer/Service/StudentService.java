@@ -7,7 +7,6 @@ import com.rama.demo.StudentServer.Entity.Student;
 import com.rama.demo.DTO.CreateStudentRequestDTO;
 import com.rama.demo.DTO.CreateStudentResponseDTO;
 
-import java.time.LocalDateTime;
 import java.util.Optional;
 
 @Service
@@ -46,8 +45,9 @@ public Student getStudentById(int id) throws Exception{
 
 }
 
-    public Student updateStudent(int id) {
+    public Student updateStudent(int id){
         return studentRepository.findById(id).orElse(null);
+
     }
 
     public Student deleteStudent(int id) {

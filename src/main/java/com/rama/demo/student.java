@@ -13,6 +13,8 @@ public class student {
         this.age=age;
         this.name=name;
     }
+
+
     public int getAge(){
         return age;
     }
